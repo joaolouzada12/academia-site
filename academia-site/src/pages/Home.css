@@ -1,0 +1,99 @@
+.home-modalities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  padding-bottom: 40px;
+}
+
+.home-card {
+  background: linear-gradient(145deg, #ffffff, #e6ebf7);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.home-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.home-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.home-card:hover img {
+  transform: scale(1.05);
+}
+
+.home-card h3 {
+  color: #1e3a8a;
+  margin: 12px 0 6px 0;
+  font-size: 1.2rem;
+}
+
+.home-card p {
+  color: #555;
+  padding: 0 12px 12px 12px;
+  font-size: 0.95rem;
+}
+
+.home-pricing {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../components/img/academia01.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 80px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  min-height: 400px;
+  box-sizing: border-box;
+}
+
+.price-card {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.15);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  flex: 1 1 250px;
+  max-width: 300px;
+  color: white;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 1024px) {
+  .price-card {
+    flex: 1 1 45%;  
+  }
+}
+
+@media (max-width: 768px) {
+  .home-pricing {
+    padding: 60px 10px;
+    min-height: 350px;
+  }
+  
+  .price-card {
+    flex: 1 1 90%; 
+    max-width: 90%;
+  }
+}

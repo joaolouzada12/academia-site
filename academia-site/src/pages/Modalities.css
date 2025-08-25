@@ -1,18 +1,107 @@
 .modalities-container {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  background-image: url('../components/img/academia10.jpg'); 
+  background-size: cover; 
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.modalities-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0); 
+  z-index: 1;
 }
 
 .modalities-container h1 {
-  text-align: center;
-  color: #1e3a8a;
+  position: relative;
+  z-index: 2;
+  color: #ffcc00;
+  font-size: 2.5rem;
   margin-bottom: 30px;
-  font-size: 2rem;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7); 
 }
 
 .modalities-grid {
-  display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.class-card {
+  background: linear-gradient(135deg, rgba(151,115,146,0.3), rgba(49,128,139,0.3));
+  padding: 25px;
+  border-radius: 15px;
+  min-width: 220px;
+  max-width: 250px;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.class-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.class-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ffd700; 
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8); 
+}
+
+.class-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f0f0f0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5); 
+}
+
+@media (max-width: 768px) {
+  .modalities-container {
+    padding: 30px 10px;
+    min-height: 120vh; 
+    background-image: url('../components/img/academia11.jpg'); 
+    background-size: cover; 
+    background-position: top center; 
+    background-repeat: no-repeat;
+  }
+  .modalities-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .class-card {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modalities-container {
+    padding: 20px 10px;
+    min-height: 140vh; 
+    background-position: top center; 
+  }
+  .modalities-container h1 {
+    font-size: 2rem;
+  }
+  .class-card {
+    padding: 20px;
+  }
 }
