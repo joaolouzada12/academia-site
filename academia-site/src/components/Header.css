@@ -1,0 +1,43 @@
+header {
+  background: #007BFF;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-align: left;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.logo p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  font-style: italic;
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
